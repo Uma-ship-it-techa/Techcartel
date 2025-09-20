@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  /* background-image: url(./images/snow-8433815_1920.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+  background: url(./images/snow-8433815_1920.jpg) center/cover no-repeat fixed;
+}
+
+body {
+  backdrop-filter: blur(120px);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-backdrop-filter: blur(120px) !important;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.137);
+  backdrop-filter: blur(20);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 10%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.171);
+}
+
+.nav--logo {
+  width: 70%;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5em;
+  list-style: none;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.123);
+}
+
+.links:hover {
+  color: #fefefe;
+}
+
+.social-links a i {
+  color: white;
+  font-size: 1.2em;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.124);
+}
+.social-links a i:hover {
+  color: #f3f3f3;
+  transform: scale(1.2, 1.2);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.124);
+}
+
+.social-links {
+  background-color: rgba(255, 255, 255, 0.235);
+  padding: 4px 6px;
+  border-radius: 5px;
+  display: flex;
+  gap: 1em;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.085);
+}
+
+/* #### main styling */
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 5em;
+  align-items: center;
+}
+
+.main--1,
+.main--2 {
+  width: 40%;
+}
+
+.main--1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.main--1 .social-links {
+  max-width: 40%;
+  justify-content: center;
+}
+
+.main--1 h3 {
+  color: lightcyan;
+}
+
+.main--1 h1 {
+  margin-top: -20px;
+  font-size: 3.5em;
+  color: #fefefe;
+  background-image: linear-gradient(to left, white, lightcoral);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.main--btns {
+  display: flex;
+  gap: 1.2em;
+}
+
+.main--btns a {
+  background-color: rgba(255, 255, 255, 0.171);
+  color: white;
+  padding: 8px 24px;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-out;
+}
+
+.main--btns a:hover {
+  color: #f3f3f3;
+  transform: scale(1.2, 1.2);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.124);
+}
+.main--2 {
+  width: 100%;
+}
+.tools {
+  width: 100px;
+}
+
+.tools img:hover {
+  /* box-shadow: 0 0 12px rgba(0, 0, 0, 0.163); */
+  transform: scale(1.1, 1.1);
+}
+
+.tools {
+  margin-top: 2em;
+  display: flex;
+  gap: 1.2em;
+}
+.about--me header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about--me header h1 {
+  font-size: 3.5em;
+  color: rgb(255, 255, 255);
+}
+
+.about--me header p {
+  width: 80%;
+  text-align: center;
+  color: #f3f3f3;
+  margin-top: 1em;
+}
+.about--me div img {
+  width: 70%;
+}
+.about--me div {
+  background-color: rgba(255, 255, 255, 0.137);
+  backdrop-filter: blur(50px);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.about--me {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-what-i-do {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3em;
+}
+
+.about--me header,
+.about-what-i-do {
+  width: 45%;
+}
+
+.about-what-i-do div p {
+  color: white;
+}
+.about-what-i-do div a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+}
+footer {
+  background-color: white;
+  backdrop-filter: blur(20px);
+  padding: 3em;
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 820px) {
+  nav ul {
+    display: none;
+  }
+  main {
+    flex-direction: column;
+    padding: 5em 2em;
+  }
+  .main--1 .main--2 {
+    width: 90%;
+  }
+  .about--me {
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+  }
+  .about--me header,
+  .about-what-i-do {
+    width: 90%;
+  }
+}
+@media (max-width: 690px) {
+  .main--btns {
+    gap: 10px;
+  }
+  .main--btns a {
+    padding: 10px 15px;
+    font-size: 0.9em;
+  }
+  .about--me header h1 {
+    font-size: 2em;
+  }
+  .about-what-i-do div p {
+    font-size: 13px;
+  }
+  .tools img {
+    width: 50px;
+  }
+  .main--1 h1 {
+    font-size: 2.5em;
+  }
+  .main--1 .social-links {
+    max-width: 60%;
+  }
+  footer p {
+    font-size: 0.8em;
+    text-align: center;
+  }
+  .about--me header,
+  .about-what-i-do,
+  .main--1,
+  .main--2 {
+    width: 90% !important;
+  }
+}
